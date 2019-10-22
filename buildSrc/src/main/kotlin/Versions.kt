@@ -17,7 +17,6 @@ object Versions {
     // support
     const val androidx = "1.2.0-alpha01"
     const val appcompat = "1.1.0-alpha05"
-    const val supportV13 = "1.0.0"
     const val lifecycle = "2.2.0-alpha01"
     const val constraintLayout = "2.0.0-beta2"
     const val vectorDrawable = "1.0.1"
@@ -31,11 +30,8 @@ object Versions {
 
     // networking
     const val moshi = "1.8.0"
-    const val okhttp = "3.14.2"
-    const val retrofit = "2.6.0"
-
-    // persistence
-    const val hawk = "2.0.1"
+    const val okhttp = "4.2.2"
+    const val retrofit = "2.6.1"
 
     // other
     const val threetenbp = "1.4.0"

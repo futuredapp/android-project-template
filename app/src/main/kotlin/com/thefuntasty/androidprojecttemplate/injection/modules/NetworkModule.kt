@@ -21,9 +21,14 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideLoggingInterceptor(): Interceptor = HttpLoggingInterceptor { message ->
-        Timber.tag("OkHttp").d(message)
-    }.setLevel(HttpLoggingInterceptor.Level.BODY)
+    fun provideLoggingInterceptor(): Interceptor =
+        HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
+            override fun log(message: String) {
+                Timber.tag("OkHttp").d(message)
+            }
+        }).apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
 
     @Provides
     @Singleton
