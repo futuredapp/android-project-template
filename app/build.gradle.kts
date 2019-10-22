@@ -125,16 +125,16 @@ dependencies {
     kapt(Dependencies.Support.lifecycleCompiler)
     implementation(Dependencies.Support.lifecycleLiveData)
     implementation(Dependencies.Support.constraintLayout)
+    implementation(Dependencies.Support.preference)
 
-    //MVVM
+    // MVVM
     implementation(Dependencies.Taste.mvvmDagger)
     implementation(Dependencies.Taste.mvvmCrInteractors)
 
-    //NavigationComponents
+    // NavigationComponents
     implementation(Dependencies.NavigationComponents.fragment)
 
-
-    //Networking
+    // Networking
     implementation(Dependencies.Networking.okHttp)
     implementation(Dependencies.Networking.logging)
     implementation(Dependencies.Networking.moshi)
@@ -148,9 +148,6 @@ dependencies {
     implementation(Dependencies.DependencyInjection.daggerAndroidSupport)
     kapt(Dependencies.DependencyInjection.daggerCompiler)
     kapt(Dependencies.DependencyInjection.daggerAndroidProcessor)
-
-    // Persistence
-    implementation(Dependencies.Persistence.hawk)
 
     // Other
     implementation(Dependencies.Other.timber)

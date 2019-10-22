@@ -20,6 +20,7 @@ object Dependencies {
         const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
         const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
         const val vectordrawable = "androidx.vectordrawable:vectordrawable:${Versions.vectorDrawable}"
+        const val preference = "androidx.preference:preference-ktx:${Versions.preference}"
     }
 
     object DependencyInjection {
@@ -47,10 +48,6 @@ object Dependencies {
     object Taste {
         const val mvvmDagger = "com.thefuntasty.mvvm:dagger:${Versions.mvvm}"
         const val mvvmCrInteractors = "com.thefuntasty.mvvm:cr-interactors:${Versions.mvvm}"
-    }
-
-    object Persistence {
-        const val hawk = "com.orhanobut:hawk:${Versions.hawk}"
     }
 
     object Other {

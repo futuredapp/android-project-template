@@ -21,6 +21,7 @@ object Versions {
     const val lifecycle = "2.2.0-alpha01"
     const val constraintLayout = "2.0.0-beta2"
     const val vectorDrawable = "1.0.1"
+    const val preference = "1.1.0"
 
     // navigation components
     const val navigationComponents = "2.1.0-alpha04"

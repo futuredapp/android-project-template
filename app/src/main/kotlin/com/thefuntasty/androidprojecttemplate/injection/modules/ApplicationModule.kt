@@ -2,6 +2,7 @@ package com.thefuntasty.androidprojecttemplate.injection.modules
 
 import android.content.Context
 import android.content.res.Resources
+import androidx.preference.PreferenceManager
 import com.squareup.moshi.Moshi
 import com.thefuntasty.androidprojecttemplate.App
 import com.thefuntasty.androidprojecttemplate.injection.ApplicationContext
@@ -24,4 +25,9 @@ class ApplicationModule {
     @Provides
     fun moshi(): Moshi = Moshi.Builder()
         .build()
+
+    @Singleton
+    @Provides
+    fun sharedPrefs(@ApplicationContext context: Context) =
+        PreferenceManager.getDefaultSharedPreferences(context)
 }
