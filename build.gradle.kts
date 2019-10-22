@@ -1,4 +1,4 @@
-import com.thefuntasty.androidprojecttemplate.BitriseLint
+import com.thefuntasty.androidprojecttemplate.LintCheck
 import com.thefuntasty.androidprojecttemplate.Clean
 import com.thefuntasty.androidprojecttemplate.DependencyUpdates
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
@@ -27,7 +27,7 @@ plugins {
 
 tasks {
     register<Clean>("clean")
-    register<BitriseLint>("bitriseLint")
+    register<LintCheck>("lintCheck")
     register<DependencyUpdates>("dependencyUpdates")
 }
 

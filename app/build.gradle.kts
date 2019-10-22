@@ -120,7 +120,6 @@ dependencies {
     // Support
     implementation(Dependencies.Support.appcompat)
     implementation(Dependencies.Support.ktx)
-    implementation(Dependencies.Support.support13)
     implementation(Dependencies.Support.vectordrawable)
     implementation(Dependencies.Support.lifecycleExtensions)
     kapt(Dependencies.Support.lifecycleCompiler)

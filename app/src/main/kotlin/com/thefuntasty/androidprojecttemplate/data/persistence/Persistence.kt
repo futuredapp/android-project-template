@@ -9,7 +9,7 @@ import javax.inject.Singleton
 @Singleton
 class Persistence @Inject constructor(
     @ApplicationContext private val context: Context
-){
+) {
 
     init {
         Hawk.init(context).build()
@@ -26,5 +26,4 @@ class Persistence @Inject constructor(
     operator fun contains(key: String): Boolean = Hawk.contains(key)
 
     fun clear(): Boolean = Hawk.deleteAll()
-
 }

@@ -10,7 +10,4 @@ abstract class ActivityBuilderModule {
 
     @ContributesAndroidInjector(modules = [NavigationActivityModule::class])
     abstract fun mainActivity(): NavigationActivity
-
-
-
 }

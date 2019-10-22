@@ -16,7 +16,6 @@ import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
-
 @Module
 class NetworkModule {
 
@@ -38,7 +37,6 @@ class NetworkModule {
         .writeTimeout(TIMEOUT_IN_SECONDS, TimeUnit.SECONDS)
         .build()
 
-
     @Provides
     @Singleton
     fun provideRetrofitService(
@@ -51,5 +49,4 @@ class NetworkModule {
         .validateEagerly(BuildConfig.DEBUG)
         .build()
         .create(ApiService::class.java)
-
 }

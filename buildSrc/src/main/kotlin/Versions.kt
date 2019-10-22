@@ -3,7 +3,7 @@
 object Versions {
 
     // gradle
-    const val gradle = "3.4.1"
+    const val androiGradlePlugin = "3.5.1"
 
     // plugins
     const val detekt = "1.0.0-RC15"

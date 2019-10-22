@@ -6,7 +6,6 @@ import com.thefuntasty.mvvm.BaseViewModel
 import com.thefuntasty.mvvm.ViewState
 import com.thefuntasty.mvvm.dagger.activity.BaseDaggerBindingActivity
 
-
 abstract class BaseBindingActivity<VM : BaseViewModel<VS>, VS : ViewState, B : ViewDataBinding> :
     BaseDaggerBindingActivity<VM, VS, B>() {
 

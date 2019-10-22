@@ -2,7 +2,6 @@ package com.thefuntasty.androidprojecttemplate.injection.modules
 
 import android.content.Context
 import android.content.res.Resources
-import com.orhanobut.hawk.Hawk
 import com.squareup.moshi.Moshi
 import com.thefuntasty.androidprojecttemplate.App
 import com.thefuntasty.androidprojecttemplate.injection.ApplicationContext

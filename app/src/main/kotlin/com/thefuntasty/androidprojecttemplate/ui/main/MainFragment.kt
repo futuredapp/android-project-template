@@ -8,7 +8,6 @@ import javax.inject.Inject
 class MainFragment : BaseBindingFragment<MainViewModel, MainViewState, FragmentMainBinding>(),
     MainView {
 
-
     @Inject
     override lateinit var viewModelFactory: MainViewModelFactory
 

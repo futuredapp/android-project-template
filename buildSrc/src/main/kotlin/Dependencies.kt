@@ -1,5 +1,5 @@
 object Dependencies {
-    const val gradlePlugin = "com.android.tools.build:gradle:${Versions.gradle}"
+    const val gradlePlugin = "com.android.tools.build:gradle:${Versions.androiGradlePlugin}"
 
     object Plugins {
         const val detekt = "io.gitlab.arturbosch.detekt"
@@ -19,7 +19,6 @@ object Dependencies {
         const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
         const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
         const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
-        const val support13 = "androidx.legacy:legacy-support-v13:${Versions.supportV13}"
         const val vectordrawable = "androidx.vectordrawable:vectordrawable:${Versions.vectorDrawable}"
     }
 
