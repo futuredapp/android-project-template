@@ -37,7 +37,7 @@ android {
         exclude("META-INF/DEPENDENCIES")
         exclude("META-INF/DEPENDENCIES")
         exclude("META-INF/LICENSE")
-        exclude("README.txt")
+        exclude("README.md")
     }
 
     dataBinding {
