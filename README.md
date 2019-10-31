@@ -23,13 +23,11 @@
 - ~~Jan Novák, iOS developer, <jan.novak@thefuntasty.com>~~
 - ~~John Newman, tester, <john.newman@thefuntasty.com>~~
 
-## Configuration management
-
-### Tools
+### Used Tools
 
 - Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://arturbosch.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/thefuntasty/danger)**
 
-## Additional Scripts
+### Additional Scripts
 
 1. `clean` - remove all `build` folders
 2. `lintCheck` - run `ktlint`, `detekt` and `android lint` checks. Same runs on CI.
