@@ -1,4 +1,4 @@
-#danger.import_dangerfile(github: "thefuntasty/danger")
+danger.import_dangerfile(github: "thefuntasty/danger")
 
 # Utils
 def report_checkstyle_for_directory(directory_name)
