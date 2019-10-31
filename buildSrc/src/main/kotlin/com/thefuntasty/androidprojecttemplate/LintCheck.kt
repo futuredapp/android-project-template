@@ -11,6 +11,7 @@ open class LintCheck : DefaultTask() {
         group = ProjectSettings.TASK_GROUP
 
         configure<ExtraPropertiesExtension> {
+            dependsOn("ktlintCheck")
             dependsOn("detekt")
             project.subprojects.forEach {
                 dependsOn("${it.name}:ktlintCheck")
