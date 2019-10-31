@@ -11,8 +11,8 @@
 - Supports: ~~**Dark mode, landscape orientation**~~
 - Design: ~~Figma/Zeplin (add link)~~
 - ~~Backend: Apiary (add link)~~
-- Architecture: MVVM
-- Interactors: Coroutines
+- Architecture: [MVVM](https://github.com/thefuntasty/mvvm-android)
+- Interactors: Kotlin Coroutines
 - Product Flavors: mock, dev, prod
 - Build Variants: debug, enterprise, release
 - ~~Localizations: Czech, English – POEditor (add link)~~
@@ -27,11 +27,7 @@
 
 ### Tools
 
-- Code style:
-	- **[ktlint](https://ktlint.github.io/)**
-	- **[detekt](https://arturbosch.github.io/detekt/)**
- 	- **[Android lint](http://tools.android.com/tips/lint)**
-	- **[Danger](https://github.com/thefuntasty/danger)**
+- Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://arturbosch.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/thefuntasty/danger)**
 
 ## Additional Scripts
 
