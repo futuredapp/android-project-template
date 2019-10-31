@@ -1,6 +1,7 @@
 # ~~Project name~~ (Android)
 
-![Bitrise](https://img.shields.io/bitrise/appid.svg?token=apptoken)
+![minSdk](https://img.shields.io/badge/minSdk-21-brightgreen.svg?style=flat) ![targetSdk](https://img.shields.io/badge/targetSdk-29-brightgreen.svg?style=flat) ![Bitrise](https://img.shields.io/bitrise/appid.svg?token=apptoken) 
+
 
 ~~Short project description.~~
 
