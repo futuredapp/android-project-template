@@ -1,6 +1,6 @@
-import com.thefuntasty.androidprojecttemplate.LintCheck
 import com.thefuntasty.androidprojecttemplate.Clean
 import com.thefuntasty.androidprojecttemplate.DependencyUpdates
+import com.thefuntasty.androidprojecttemplate.LintCheck
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -9,7 +9,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-
     }
     dependencies {
         classpath(Dependencies.gradlePlugin)
@@ -54,8 +53,16 @@ subprojects {
 
 detekt {
     version = Versions.detekt
-    input = files(rootDir)
+    input = files(rootDir, "buildSrc/")
     filters = ".*/resources/.*,.*/build/.*"
     config = files("$rootDir/detekt.yml")
     failFast = false
+}
+
+ktlint {
+    version.set(Versions.ktlint)
+    ignoreFailures.set(true)
+    android.set(true)
+    outputToConsole.set(true)
+    reporters.set(setOf(ReporterType.PLAIN, ReporterType.CHECKSTYLE))
 }
