@@ -28,6 +28,10 @@
 
 - Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://arturbosch.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/thefuntasty/danger)**
 
+### ~~Test accounts~~
+
+- ~~dev - login: `a@a.com`, password: `hesloheslo`~~
+
 ### Additional Scripts
 
 1. `clean` - remove all `build` folders
