@@ -12,6 +12,8 @@
 - Supports: ~~**Dark mode, landscape orientation**~~
 - Design: ~~Figma/Zeplin (add link)~~
 - ~~Backend: Apiary (add link)~~
+  - ~~Prod: https://live.app.com~~
+  - ~~Dev: https://dev.app.com~~
 - Architecture: [MVVM](https://github.com/thefuntasty/mvvm-android)
 - Interactors: Kotlin Coroutines
 - Product Flavors: mock, dev, prod
