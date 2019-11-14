@@ -20,6 +20,8 @@ android {
 
         vectorDrawables.useSupportLibrary = true
 
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = mapOf("room.schemaLocation" to "$projectDir/schemas")
@@ -152,4 +154,9 @@ dependencies {
     // Other
     implementation(Dependencies.Other.timber)
     implementation(Dependencies.Other.threetenbp)
+
+    testImplementation(Dependencies.Test.core)
+    testImplementation(Dependencies.Test.runner)
+    testImplementation(Dependencies.Test.junit)
+    testImplementation(Dependencies.Test.mockk)
 }

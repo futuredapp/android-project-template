@@ -55,4 +55,10 @@ object Dependencies {
         const val threetenbp = "org.threeten:threetenbp:${Versions.threetenbp}:"
     }
 
+    object Test {
+        const val core = "androidx.test:core:${Versions.testCore}"
+        const val runner = "androidx.test:runner:${Versions.testRunner}"
+        const val junit = "androidx.test.ext:junit:${Versions.junit}"
+        const val mockk = "io.mockk:mockk:${Versions.mockk}"
+    }
 }
