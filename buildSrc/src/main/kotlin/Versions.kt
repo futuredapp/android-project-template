@@ -40,6 +40,7 @@ object Versions {
     // taste
     const val mvvm = "2.1.0"
 
+    // testing
     const val testCore = "1.2.0"
     const val testRunner = "1.2.0"
     const val junit = "1.1.1"
