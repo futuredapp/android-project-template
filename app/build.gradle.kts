@@ -155,6 +155,7 @@ dependencies {
     implementation(Dependencies.Other.timber)
     implementation(Dependencies.Other.threetenbp)
 
+    // Testing
     testImplementation(Dependencies.Test.core)
     testImplementation(Dependencies.Test.runner)
     testImplementation(Dependencies.Test.junit)
