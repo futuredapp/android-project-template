@@ -11,6 +11,7 @@ class App : DaggerApplication() {
         return DaggerApplicationComponent.factory().create(this)
     }
 
+
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) {
