@@ -114,7 +114,6 @@ android {
 
     lintOptions {
         textReport = true             // Write a text report to the console (Useful for CI logs)
-        textOutput("stdout")
         isExplainIssues = false       // HTML/XML reports are too verbose in console logs
         isCheckDependencies = false   // Required to get all unused resource from other modules (disabled to speed up linting)
         isCheckTestSources = true     // Also check test case code for lint issues
