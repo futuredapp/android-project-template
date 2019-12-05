@@ -113,11 +113,11 @@ android {
     }
 
     lintOptions {
-        textReport = true             // Write a text report to the console (Useful for CI logs)
-        isExplainIssues = false       // HTML/XML reports are too verbose in console logs
-        isCheckDependencies = false   // Required to get all unused resource from other modules (disabled to speed up linting)
-        isCheckTestSources = true     // Also check test case code for lint issues
-        isCheckReleaseBuilds = false  // If we run a full lint analysis as build part in CI, we can skip redundant checks
+        textReport = true // Write a text report to the console (Useful for CI logs)
+        isExplainIssues = false // HTML/XML reports are too verbose in console logs
+        isCheckDependencies = false // Required to get all unused resource from other modules (disabled to speed up linting)
+        isCheckTestSources = true // Also check test case code for lint issues
+        isCheckReleaseBuilds = false // If we run a full lint analysis as build part in CI, we can skip redundant checks
     }
 }
 
