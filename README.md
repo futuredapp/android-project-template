@@ -8,13 +8,13 @@
 ## Project info
 
 - Deadline: ~~**--. --. ----**~~
-- ApplicationId: ~~`com.thefuntasty.project`~~
+- ApplicationId: ~~`app.futured.project`~~
 - Supports: ~~**Dark mode, landscape orientation**~~
 - Design: ~~Figma/Zeplin (add link)~~
 - ~~Backend: Apiary (add link)~~
   - ~~Prod: https://live.app.com~~
   - ~~Staging: https://staging.app.com~~
-- Architecture: [MVVM](https://github.com/thefuntasty/mvvm-android)
+- Architecture: [MVVM](https://github.com/futuredapp/mvvm-android)
 - Interactors: Kotlin Coroutines
 - Product Flavors: mock, dev, prod
 - Build Variants: debug, enterprise, release
@@ -22,13 +22,13 @@
 
 ### Team:
 
-- ~~Jana Nováková, PM, <jana.novakova@thefuntasty.com>~~
-- ~~Jan Novák, iOS developer, <jan.novak@thefuntasty.com>~~
-- ~~John Newman, tester, <john.newman@thefuntasty.com>~~
+- ~~Jana Nováková, PM, <jana.novakova@futured.app>~~
+- ~~Jan Novák, iOS developer, <jan.novak@futured.app>~~
+- ~~John Newman, tester, <john.newman@futured.app>~~
 
 ### Used Tools
 
-- Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://arturbosch.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/thefuntasty/danger)**
+- Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://arturbosch.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/futuredapp/danger)**
 
 ### ~~Test accounts~~
 

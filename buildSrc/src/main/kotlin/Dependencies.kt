@@ -1,5 +1,5 @@
 object Dependencies {
-    const val gradlePlugin = "com.android.tools.build:gradle:${Versions.androiGradlePlugin}"
+    const val gradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
 
     object Plugins {
         const val detekt = "io.gitlab.arturbosch.detekt"

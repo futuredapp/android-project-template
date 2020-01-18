@@ -1,7 +1,7 @@
 object ProjectSettings {
 
     const val projectName = "Android project template"
-    const val applicationId = "com.thefuntasty.androidprojecttemplate"
+    const val applicationId = "app.futured.androidprojecttemplate"
     const val compileSdkVersion = 29
     const val targetSdk = 29
     const val minSdk = 21
@@ -34,5 +34,5 @@ object ProjectSettings {
         val STORE_PASSWORD = System.getenv("STORE_PASSWORD") ?: ""
     }
 
-    const val TASK_GROUP = "thefuntasty"
+    const val TASK_GROUP = "futured"
 }
