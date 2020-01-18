@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.thefuntasty.androidprojecttemplate.ui.main.MainFragment"
+        android:name="app.futured.androidprojecttemplate.ui.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 </navigation>

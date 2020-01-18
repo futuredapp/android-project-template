@@ -1,6 +1,6 @@
-import com.thefuntasty.androidprojecttemplate.Clean
-import com.thefuntasty.androidprojecttemplate.DependencyUpdates
-import com.thefuntasty.androidprojecttemplate.LintCheck
+import app.futured.androidprojecttemplate.Clean
+import app.futured.androidprojecttemplate.DependencyUpdates
+import app.futured.androidprojecttemplate.LintCheck
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.

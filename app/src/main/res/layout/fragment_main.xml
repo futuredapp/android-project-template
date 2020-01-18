@@ -7,15 +7,15 @@
 
         <variable
             name="view"
-            type="com.thefuntasty.androidprojecttemplate.ui.main.MainView" />
+            type="app.futured.androidprojecttemplate.ui.main.MainView"/>
 
         <variable
             name="viewModel"
-            type="com.thefuntasty.androidprojecttemplate.ui.main.MainViewModel" />
+            type="app.futured.androidprojecttemplate.ui.main.MainViewModel"/>
 
         <variable
             name="viewState"
-            type="com.thefuntasty.androidprojecttemplate.ui.main.MainViewState" />
+            type="app.futured.androidprojecttemplate.ui.main.MainViewState"/>
 
     </data>
 

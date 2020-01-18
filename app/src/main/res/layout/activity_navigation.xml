@@ -8,15 +8,15 @@
 
         <variable
             name="view"
-            type="com.thefuntasty.androidprojecttemplate.ui.navigation.NavigationView" />
+            type="app.futured.androidprojecttemplate.ui.navigation.NavigationView"/>
 
         <variable
             name="viewModel"
-            type="com.thefuntasty.androidprojecttemplate.ui.navigation.NavigationViewModel" />
+            type="app.futured.androidprojecttemplate.ui.navigation.NavigationViewModel"/>
 
         <variable
             name="viewState"
-            type="com.thefuntasty.androidprojecttemplate.ui.navigation.NavigationViewState" />
+            type="app.futured.androidprojecttemplate.ui.navigation.NavigationViewState"/>
 
     </data>
 
