@@ -1,0 +1,64 @@
+name: Release build
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Release build
+    runs-on: [ubuntu-latest]
+    env:
+      # TODO AppCenter application name, eg. "futured/Gastromapa"
+      APPCENTER_APP_NAME: futured/app-name
+      APPCENTER_GROUPS: Release
+      EXCLUDE_APK_FILTER: .*unaligned.apk\|.*Test.*.apk
+      # TODO Platform-specific slack channel name for notifications, eg. "gmlh-android"
+      SLACK_CHANNEL: project-slack-channel-name
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Generate build number
+        uses: einaregilsson/build-number@v2
+        with:
+          token: ${{secrets.github_token}}
+      - name: Run check and Assemble APK
+        env:
+          BITRISE_BUILD_NUMBER: ${{ env.BUILD_NUMBER }}
+        shell: bash
+        run: ./gradlew lintCheck assembleProdRelease
+      - name: Run unit tests
+        shell: bash
+        run: ./gradlew --continue testDevEnterpriseUnitTest
+      - name: Find artifacts and mapping file
+        shell: bash
+        run: |
+          echo ::set-output name=apk_file::$(find . -name "*.apk" | grep -v ${{env.EXCLUDE_APK_FILTER}})
+          echo ::set-output name=aab_file::$(find . -name "*.aab")
+          echo ::set-output name=mapping_file::$(find . -name mapping.txt)
+        id: artifacts
+      - name: Publish to App Center
+        uses: okalman/AppCenter-Github-Action@master
+        with:
+          appName: ${{env.APPCENTER_APP_NAME}}
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: ${{env.APPCENTER_GROUPS}}
+          file: ${{steps.artifacts.outputs.apk_file}}
+          releaseNotes: ${{ github.event.release.body }}
+      - name: Slack Notification
+        if: failure()
+        uses: homoluctus/slatify@master
+        with:
+          type: "failure"
+          job_name: '*Release build*'
+          username: GitHub
+          channel: ${{env.SLACK_CHANNEL}}
+          url: ${{secrets.SLACK_WEB_HOOK}}
+          commit: true
+          token: ${{secrets.GITHUB_TOKEN}}
