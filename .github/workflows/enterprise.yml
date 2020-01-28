@@ -8,13 +8,13 @@ jobs:
     name: Enterprise build
     runs-on: [ubuntu-latest]
     env:
-      # REQUIRED, AppCenter application name, eg. "futured/Gastromapa"
-      APPCENTER_APP_NAME: futured/app-name
+      # TODO AppCenter application name, eg. "futured/Gastromapa"
+      # TODO APPCENTER_APP_NAME: futured/app-name
       # Add additional AppCenter user groups separated by semicolon, if applicable, eg. "Collaborators;Partners"
       APPCENTER_GROUPS: Collaborators
       EXCLUDE_APK_FILTER: .*unaligned.apk\|.*Test.*.apk
-      # REQUIRED, Platform-specific slack channel name for notifications, eg. "gmlh-android"
-      SLACK_CHANNEL: project-slack-channel-name
+      # TODO Platform-specific slack channel name for notifications, eg. "gmlh-android"
+      # TODO SLACK_CHANNEL: project-slack-channel-name
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1

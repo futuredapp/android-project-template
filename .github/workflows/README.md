@@ -9,4 +9,4 @@ Go to `Settings -> Secrets` and add following secrets:
 
 ### 2. Configure workflow .yml files
 
-For each workflow configuration file, configure all environment variables marked as `REQUIRED` in comments.
+For each workflow configuration file, configure all environment variables marked with `TODO` comment.

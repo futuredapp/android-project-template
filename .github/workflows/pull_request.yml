@@ -6,8 +6,8 @@ jobs:
     name: PR check
     runs-on: [ubuntu-latest]
     env:
-      # REQUIRED, Platform-specific slack channel name for notifications, eg. "gmlh-android"
-      SLACK_CHANNEL: project-slack-channel-name
+      # TODO Platform-specific slack channel name for notifications, eg. "gmlh-android"
+      # TODO SLACK_CHANNEL: project-slack-channel-name
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1
