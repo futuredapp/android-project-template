@@ -150,7 +150,6 @@ dependencies {
     implementation(Dependencies.Networking.moshi)
     implementation(Dependencies.Networking.retrofit)
     implementation(Dependencies.Networking.retrofitConverter)
-    implementation(Dependencies.Networking.retrofitAdapter)
     implementation(Dependencies.NavigationComponents.ui)
 
     // Dependency injection
