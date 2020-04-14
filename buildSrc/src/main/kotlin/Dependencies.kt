@@ -42,7 +42,6 @@ object Dependencies {
         const val logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
         const val retrofitConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
-        const val retrofitAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     }
 
     object Taste {
