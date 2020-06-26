@@ -9,7 +9,7 @@ jobs:
       # TODO Platform-specific slack channel name for notifications, eg. "gmlh-android"
       SLACK_CHANNEL: project-slack-channel-name
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'

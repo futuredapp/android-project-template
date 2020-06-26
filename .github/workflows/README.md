@@ -1,11 +1,11 @@
 ## Setting up workflows
 
-### 1. Add required secrets in repository settings
-Go to `Settings -> Secrets` and add following secrets:
+### 1. Following secrets are needed by implemented workflows. All of them are available
+in organization level secrets, you just have to grant access to particular app:
 
 1. `DANGER_GITHUB_API_TOKEN`
 2. `SLACK_WEB_HOOK`
-3. `APP_CENTER_TOKEN`
+3. `APPCENTER_API_TOKEN`
 
 ### 2. Configure workflow .yml files
 

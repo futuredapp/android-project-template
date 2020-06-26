@@ -16,7 +16,7 @@ jobs:
       # TODO Platform-specific slack channel name for notifications, eg. "gmlh-android"
       SLACK_CHANNEL: project-slack-channel-name
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
@@ -44,10 +44,10 @@ jobs:
           echo ::set-output name=mapping_file::$(find . -name mapping.txt)
         id: artifacts
       - name: Publish to App Center
-        uses: okalman/AppCenter-Github-Action@master
+        uses: wzieba/AppCenter-Github-Action@v1.1.1
         with:
           appName: ${{env.APPCENTER_APP_NAME}}
-          token: ${{secrets.APP_CENTER_TOKEN}}
+          token: ${{secrets.APPCENTER_API_TOKEN}}
           group: ${{env.APPCENTER_GROUPS}}
           file: ${{steps.artifacts.outputs.apk_file}}
           releaseNotes: ${{ github.event.head_commit.message }}
