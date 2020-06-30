@@ -6,7 +6,7 @@ object ProjectSettings {
     const val targetSdk = 29
     const val minSdk = 21
     const val versionName = "1.0.0"
-    val versionCode = System.getenv("BITRISE_BUILD_NUMBER")?.toInt() ?: 1
+    val versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
 
     object Flavor {
         const val DIMENSION = "api"

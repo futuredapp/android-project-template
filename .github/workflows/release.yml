@@ -29,8 +29,6 @@ jobs:
         with:
           token: ${{secrets.github_token}}
       - name: Run check and Assemble APK
-        env:
-          BITRISE_BUILD_NUMBER: ${{ env.BUILD_NUMBER }}
         shell: bash
         run: ./gradlew lintCheck assembleProdRelease
       - name: Run unit tests
