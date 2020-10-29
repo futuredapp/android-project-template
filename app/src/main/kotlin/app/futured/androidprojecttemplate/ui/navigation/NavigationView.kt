@@ -1,5 +1,5 @@
 package app.futured.androidprojecttemplate.ui.navigation
 
-import com.thefuntasty.mvvm.BaseView
+import app.futured.arkitekt.core.BaseView
 
 interface NavigationView : BaseView
