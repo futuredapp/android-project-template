@@ -2,9 +2,9 @@ package app.futured.androidprojecttemplate.ui.base
 
 import androidx.databinding.ViewDataBinding
 import app.futured.androidprojecttemplate.BR
-import com.thefuntasty.mvvm.BaseViewModel
-import com.thefuntasty.mvvm.ViewState
-import com.thefuntasty.mvvm.dagger.fragment.BaseDaggerBindingFragment
+import app.futured.arkitekt.core.BaseViewModel
+import app.futured.arkitekt.core.ViewState
+import app.futured.arkitekt.dagger.fragment.BaseDaggerBindingFragment
 
 abstract class BaseBindingFragment<VM : BaseViewModel<VS>, VS : ViewState, B : ViewDataBinding> :
     BaseDaggerBindingFragment<VM, VS, B>() {

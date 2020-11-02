@@ -4,7 +4,7 @@ object Dependencies {
     object Plugins {
         const val detekt = "io.gitlab.arturbosch.detekt"
         const val ktlint = "org.jlleitschuh.gradle.ktlint"
-        const val templates = "com.thefuntasty.mvvm.android-templates"
+        const val templates = "app.futured.arkitekt.templates"
     }
 
     object Kotlin {
@@ -45,8 +45,8 @@ object Dependencies {
     }
 
     object Taste {
-        const val mvvmDagger = "com.thefuntasty.mvvm:dagger:${Versions.mvvm}"
-        const val mvvmCrInteractors = "com.thefuntasty.mvvm:cr-interactors:${Versions.mvvm}"
+        const val mvvmDagger = "app.futured.arkitekt:dagger:${Versions.arkitekt}"
+        const val mvvmCrInteractors = "app.futured.arkitekt:cr-usecases:${Versions.arkitekt}"
     }
 
     object Other {
