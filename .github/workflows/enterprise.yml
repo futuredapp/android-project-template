@@ -24,10 +24,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Generate build number
-        uses: einaregilsson/build-number@v2
-        with:
-          token: ${{secrets.github_token}}
       - name: Run check and Assemble APK
         shell: bash
         run: ./gradlew lintCheck assembleDevEnterprise
