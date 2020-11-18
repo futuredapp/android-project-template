@@ -44,7 +44,7 @@ jobs:
       - name: Publish to App Center
         uses: wzieba/AppCenter-Github-Action@v1.1.1
         with:
-          appName: ${{env.APPCENTER_APP_NAME}}einaregilsson/build-number
+          appName: ${{env.APPCENTER_APP_NAME}}
           token: ${{secrets.APPCENTER_API_TOKEN}}
           group: ${{env.APPCENTER_GROUPS}}
           file: ${{steps.artifacts.outputs.apk_file}}
