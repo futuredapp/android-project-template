@@ -21,7 +21,7 @@ plugins {
     idea
     id(Dependencies.Plugins.detekt) version Versions.detekt
     id(Dependencies.Plugins.ktlint) version Versions.ktlintGradle
-    id(Dependencies.Plugins.templates) version Versions.templates
+    id(Dependencies.Plugins.templates) version Versions.arkitekt
 }
 
 tasks {
@@ -47,14 +47,16 @@ subprojects {
         ignoreFailures.set(true)
         android.set(true)
         outputToConsole.set(true)
-        reporters.set(setOf(ReporterType.PLAIN, ReporterType.CHECKSTYLE))
+        reporters {
+            reporter(ReporterType.PLAIN)
+            reporter(ReporterType.CHECKSTYLE)
+        }
     }
 }
 
 detekt {
     version = Versions.detekt
     input = files(rootDir, "buildSrc/")
-    filters = ".*/resources/.*,.*/build/.*"
     config = files("$rootDir/detekt.yml")
     failFast = false
 }
@@ -64,5 +66,8 @@ ktlint {
     ignoreFailures.set(true)
     android.set(true)
     outputToConsole.set(true)
-    reporters.set(setOf(ReporterType.PLAIN, ReporterType.CHECKSTYLE))
+    reporters {
+        reporter(ReporterType.PLAIN)
+        reporter(ReporterType.CHECKSTYLE)
+    }
 }

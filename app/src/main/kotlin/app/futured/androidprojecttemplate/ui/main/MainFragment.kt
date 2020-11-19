@@ -5,8 +5,7 @@ import app.futured.androidprojecttemplate.databinding.FragmentMainBinding
 import app.futured.androidprojecttemplate.ui.base.BaseBindingFragment
 import javax.inject.Inject
 
-class MainFragment : BaseBindingFragment<MainViewModel, MainViewState, FragmentMainBinding>(),
-    MainView {
+class MainFragment : BaseBindingFragment<MainViewModel, MainViewState, FragmentMainBinding>(), MainView {
 
     @Inject
     override lateinit var viewModelFactory: MainViewModelFactory

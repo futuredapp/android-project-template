@@ -1,6 +1,6 @@
 package app.futured.androidprojecttemplate.ui.main
 
-import com.thefuntasty.mvvm.crinteractors.BaseCrViewModel
+import app.futured.arkitekt.crusecases.BaseCrViewModel
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
