@@ -2,19 +2,20 @@ package app.futured.androidprojecttemplate.data.persistence
 
 import android.content.SharedPreferences
 import androidx.core.content.edit
-import com.squareup.moshi.Moshi
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.serializer
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.reflect.KClass
 
 @Singleton
 class Persistence @Inject constructor(
-    private val moshi: Moshi,
-    private val sharedPreferences: SharedPreferences
+    val json: Json,
+    val sharedPreferences: SharedPreferences
 ) {
 
-    operator fun <T : Any> set(key: String, value: T) =
-        sharedPreferences.edit { putString(key, moshi.adapter<T>(value::class.java).toJson(value)) }
+    inline operator fun <reified T : Any> set(key: String, value: T) =
+        sharedPreferences.edit { putString(key, json.encodeToString(serializer(), value)) }
 
     inline operator fun <reified T : Any> get(key: String): T =
         get(T::class, key, null)!!
@@ -33,12 +34,13 @@ class Persistence @Inject constructor(
 
     fun clear() = sharedPreferences.edit { clear() }
 
-    fun <T : Any> get(clazz: KClass<T>, key: String, defaultValue: T? = null): T? {
+    @Suppress("UNUSED_PARAMETER")
+    inline fun <reified T : Any> get(clazz: KClass<T>, key: String, defaultValue: T? = null): T? {
         val persistedValue = sharedPreferences.getString(key, null)
         return if (persistedValue == null) {
             defaultValue
         } else {
-            moshi.adapter<T>(clazz.java).fromJson(persistedValue)
+            json.decodeFromString(serializer<T>(), persistedValue)
         }
     }
 }

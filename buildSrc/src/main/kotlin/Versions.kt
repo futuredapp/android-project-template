@@ -11,7 +11,7 @@ object Versions {
     const val ktlint = "0.39.0"
 
     // kotlin
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.4.32"
 
     // support
     const val androidx = "1.3.2"
@@ -28,9 +28,12 @@ object Versions {
     const val dagger = "2.29.1"
 
     // networking
-    const val moshi = "1.11.0"
     const val okhttp = "4.9.0"
     const val retrofit = "2.9.0"
+
+    // serialization
+    const val serializationJson = "1.1.0"
+    const val serializationConverter = "0.8.0"
 
     // other
     const val threetenbp = "1.5.0"

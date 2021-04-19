@@ -37,11 +37,15 @@ object Dependencies {
     }
 
     object Networking {
-        const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
         const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
         const val logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-        const val retrofitConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    }
+
+    object Serialization {
+        const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serializationJson}"
+        const val converter =
+            "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.serializationConverter}"
     }
 
     object Taste {
