@@ -162,7 +162,7 @@ dependencies {
     implementation(Dependencies.NavigationComponents.ui)
 
     // Serialization
-    implementation(Dependencies.Serialization.serialization)
+    implementation(Dependencies.Serialization.serializationJson)
     implementation(Dependencies.Serialization.converter)
 
     // Dependency injection
