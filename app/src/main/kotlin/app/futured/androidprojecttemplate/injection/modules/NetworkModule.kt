@@ -4,14 +4,16 @@ import app.futured.androidprojecttemplate.BuildConfig
 import app.futured.androidprojecttemplate.data.remote.ApiService
 import app.futured.androidprojecttemplate.tools.Constants.Api.BASE_PROD_URL
 import app.futured.androidprojecttemplate.tools.Constants.Api.TIMEOUT_IN_SECONDS
-import com.squareup.moshi.Moshi
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -22,11 +24,9 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideLoggingInterceptor(): Interceptor =
-        HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
-            override fun log(message: String) {
-                Timber.tag("OkHttp").d(message)
-            }
-        }).apply {
+        HttpLoggingInterceptor { message ->
+            Timber.tag("OkHttp").d(message)
+        }.apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
 
@@ -44,12 +44,13 @@ class NetworkModule {
 
     @Provides
     @Singleton
+    @OptIn(ExperimentalSerializationApi::class)
     fun provideRetrofitService(
         okHttpClient: OkHttpClient,
-        moshi: Moshi
+        json: Json
     ) = Retrofit.Builder()
         .baseUrl(BASE_PROD_URL)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .client(okHttpClient)
         .validateEagerly(BuildConfig.DEBUG)
         .build()

@@ -6,6 +6,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     kotlin("android.extensions")
+    kotlin("plugin.serialization") version Versions.kotlin
     id("androidx.navigation.safeargs.kotlin")
 }
 
@@ -24,7 +25,9 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = mapOf("room.schemaLocation" to "$projectDir/schemas")
+                arguments.apply {
+                    put("room.schemaLocation", "$projectDir/schemas")
+                }
             }
         }
     }
@@ -53,6 +56,10 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
 
     sourceSets {
@@ -151,10 +158,12 @@ dependencies {
     // Networking
     implementation(Dependencies.Networking.okHttp)
     implementation(Dependencies.Networking.logging)
-    implementation(Dependencies.Networking.moshi)
     implementation(Dependencies.Networking.retrofit)
-    implementation(Dependencies.Networking.retrofitConverter)
     implementation(Dependencies.NavigationComponents.ui)
+
+    // Serialization
+    implementation(Dependencies.Serialization.serializationJson)
+    implementation(Dependencies.Serialization.converter)
 
     // Dependency injection
     implementation(Dependencies.DependencyInjection.dagger)

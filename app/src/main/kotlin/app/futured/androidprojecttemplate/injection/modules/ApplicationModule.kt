@@ -5,9 +5,12 @@ import android.content.res.Resources
 import androidx.preference.PreferenceManager
 import app.futured.androidprojecttemplate.App
 import app.futured.androidprojecttemplate.injection.ApplicationContext
-import com.squareup.moshi.Moshi
+import app.futured.androidprojecttemplate.tools.serialization.ZonedDateTimeSerializer
 import dagger.Module
 import dagger.Provides
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.modules.SerializersModule
+import org.threeten.bp.ZonedDateTime
 import javax.inject.Singleton
 
 @Module
@@ -23,8 +26,14 @@ class ApplicationModule {
 
     @Singleton
     @Provides
-    fun moshi(): Moshi = Moshi.Builder()
-        .build()
+    fun json(): Json = Json(from = Json.Default) {
+        encodeDefaults = true
+        ignoreUnknownKeys = true
+        isLenient = true
+        serializersModule = SerializersModule {
+            contextual(ZonedDateTime::class, ZonedDateTimeSerializer)
+        }
+    }
 
     @Singleton
     @Provides
