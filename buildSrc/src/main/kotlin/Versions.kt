@@ -3,7 +3,7 @@
 object Versions {
 
     // gradle
-    const val androidGradlePlugin = "4.1.1"
+    const val androidGradlePlugin = "7.0.0-beta05"
 
     // plugins
     const val detekt = "1.14.2"
@@ -11,18 +11,23 @@ object Versions {
     const val ktlint = "0.39.0"
 
     // kotlin
-    const val kotlin = "1.4.32"
+    const val kotlin = "1.5.10"
+
+    const val composeVersion = "1.0.0-rc01"
 
     // support
     const val androidx = "1.3.2"
     const val appcompat = "1.2.0"
     const val lifecycle = "2.2.0"
-    const val constraintLayout = "2.0.4"
+    const val constraintLayout = "1.0.0-alpha08"
     const val vectorDrawable = "1.1.0"
     const val preference = "1.1.1"
 
+    const val activity = "1.3.0-rc01"
+
     // navigation components
-    const val navigationComponents = "2.3.5"
+    const val navigation = "2.4.0-alpha04"
+    const val hiltNavigation = "1.0.0-alpha03"
 
     // dependency injection
     const val dagger = "2.34.1"
@@ -41,6 +46,9 @@ object Versions {
 
     // taste
     const val arkitekt = "4.0.0"
+
+    // hilt
+    const val hilt = "2.37"
 
     // testing
     const val testCore = "1.3.0"

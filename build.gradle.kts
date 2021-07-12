@@ -13,7 +13,7 @@ buildscript {
     dependencies {
         classpath(Dependencies.gradlePlugin)
         classpath(kotlin(Dependencies.Kotlin.gradlePlugin, Versions.kotlin))
-        classpath(Dependencies.NavigationComponents.safeArgs)
+        classpath(Dependencies.hiltPlugin)
     }
 }
 
@@ -41,33 +41,32 @@ allprojects {
 
 subprojects {
     apply(plugin = Dependencies.Plugins.ktlint)
-
-    ktlint {
+    ktlint.apply {
         version.set(Versions.ktlint)
         ignoreFailures.set(true)
         android.set(true)
         outputToConsole.set(true)
-        reporters {
+        reporters(Action {
             reporter(ReporterType.PLAIN)
             reporter(ReporterType.CHECKSTYLE)
-        }
+        })
     }
 }
 
-detekt {
+detekt.apply {
     version = Versions.detekt
     input = files(rootDir, "buildSrc/")
     config = files("$rootDir/detekt.yml")
     failFast = false
 }
 
-ktlint {
+ktlint.apply {
     version.set(Versions.ktlint)
     ignoreFailures.set(true)
     android.set(true)
     outputToConsole.set(true)
-    reporters {
+    reporters(Action {
         reporter(ReporterType.PLAIN)
         reporter(ReporterType.CHECKSTYLE)
-    }
+    })
 }

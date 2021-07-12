@@ -7,15 +7,15 @@ plugins {
     kotlin("kapt")
     kotlin("android.extensions")
     kotlin("plugin.serialization") version Versions.kotlin
-    id("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
 }
 
-android {
-    compileSdkVersion(ProjectSettings.compileSdkVersion)
+android.apply {
+    compileSdk = ProjectSettings.compileSdkVersion
     defaultConfig {
         applicationId = ProjectSettings.applicationId
-        minSdkVersion(ProjectSettings.minSdk)
-        targetSdkVersion(ProjectSettings.targetSdk)
+        minSdk = ProjectSettings.minSdk
+        targetSdk = ProjectSettings.targetSdk
         versionCode = ProjectSettings.versionCode
         versionName = ProjectSettings.versionName
 
@@ -32,7 +32,7 @@ android {
         }
     }
 
-    androidExtensions {
+    androidExtensions.apply {
         configure<AndroidExtensionsExtension> {
             isExperimental = true
         }
@@ -46,7 +46,7 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true
+        compose = true
     }
 
     compileOptions {
@@ -54,8 +54,12 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    kotlinOptions {
+    kotlinOptions.apply {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.composeVersion
     }
 
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
@@ -141,35 +145,48 @@ dependencies {
     // Support
     implementation(Dependencies.Support.appcompat)
     implementation(Dependencies.Support.ktx)
-    implementation(Dependencies.Support.vectordrawable)
+    implementation(Dependencies.Support.lifecycleViewModel)
+    implementation(Dependencies.Support.lifecycleRuntime)
+    implementation(Dependencies.Support.activityKtx)
     implementation(Dependencies.Support.lifecycleExtensions)
-    kapt(Dependencies.Support.lifecycleCompiler)
-    implementation(Dependencies.Support.lifecycleLiveData)
-    implementation(Dependencies.Support.constraintLayout)
+    implementation(Dependencies.Support.lifecycleCompiler)
+
+    implementation(Dependencies.Support.vectordrawable)
     implementation(Dependencies.Support.preference)
 
+    // Compose
+    implementation(Dependencies.Compose.animation)
+    implementation(Dependencies.Compose.foundation)
+    implementation(Dependencies.Compose.foundation_layout)
+    implementation(Dependencies.Compose.material)
+    implementation(Dependencies.Compose.material_icons_extended)
+    implementation(Dependencies.Compose.runtime_livedata)
+    implementation(Dependencies.Compose.runtime)
+    implementation(Dependencies.Compose.ui)
+    implementation(Dependencies.Compose.ui_tooling)
+    implementation(Dependencies.Compose.activity)
+    implementation(Dependencies.Compose.constraintLayout)
+
+
     // MVVM
-    implementation(Dependencies.Taste.mvvmDagger)
     implementation(Dependencies.Taste.mvvmCrInteractors)
 
+    // Hilt
+    implementation(Dependencies.Hilt.hilt)
+    kapt(Dependencies.Hilt.hiltCompiler)
+
     // NavigationComponents
-    implementation(Dependencies.NavigationComponents.fragment)
+    implementation(Dependencies.NavigationComponents.navigation)
+    implementation(Dependencies.NavigationComponents.navigationHilt)
 
     // Networking
     implementation(Dependencies.Networking.okHttp)
     implementation(Dependencies.Networking.logging)
     implementation(Dependencies.Networking.retrofit)
-    implementation(Dependencies.NavigationComponents.ui)
 
     // Serialization
     implementation(Dependencies.Serialization.serializationJson)
     implementation(Dependencies.Serialization.converter)
-
-    // Dependency injection
-    implementation(Dependencies.DependencyInjection.dagger)
-    implementation(Dependencies.DependencyInjection.daggerAndroidSupport)
-    kapt(Dependencies.DependencyInjection.daggerCompiler)
-    kapt(Dependencies.DependencyInjection.daggerAndroidProcessor)
 
     // Other
     implementation(Dependencies.Other.timber)

@@ -3,28 +3,23 @@ package app.futured.androidprojecttemplate.injection.modules
 import android.content.Context
 import android.content.res.Resources
 import androidx.preference.PreferenceManager
-import app.futured.androidprojecttemplate.App
-import app.futured.androidprojecttemplate.injection.ApplicationContext
 import app.futured.androidprojecttemplate.tools.serialization.ZonedDateTimeSerializer
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import org.threeten.bp.ZonedDateTime
-import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
 class ApplicationModule {
 
     @Provides
-    @ApplicationContext
-    fun context(app: App): Context = app
-
-    @Singleton
-    @Provides
     fun resources(@ApplicationContext context: Context): Resources = context.resources
 
-    @Singleton
     @Provides
     fun json(): Json = Json(from = Json.Default) {
         encodeDefaults = true
@@ -35,7 +30,6 @@ class ApplicationModule {
         }
     }
 
-    @Singleton
     @Provides
     fun sharedPrefs(@ApplicationContext context: Context) =
         PreferenceManager.getDefaultSharedPreferences(context)

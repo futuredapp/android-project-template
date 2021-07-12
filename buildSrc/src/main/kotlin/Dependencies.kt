@@ -1,5 +1,6 @@
 object Dependencies {
     const val gradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
+    const val hiltPlugin =  "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
 
     object Plugins {
         const val detekt = "io.gitlab.arturbosch.detekt"
@@ -12,28 +13,38 @@ object Dependencies {
         const val stdlib = "stdlib-jdk7"
     }
 
+    object Compose {
+        const val animation = "androidx.compose.animation:animation:${Versions.composeVersion}"
+        const val foundation = "androidx.compose.foundation:foundation:${Versions.composeVersion}"
+        const val foundation_layout = "androidx.compose.foundation:foundation-layout:${Versions.composeVersion}"
+        const val material = "androidx.compose.material:material:${Versions.composeVersion}"
+        const val material_icons_extended = "androidx.compose.material:material-icons-extended:${Versions.composeVersion}"
+        const val runtime_livedata = "androidx.compose.runtime:runtime-livedata:${Versions.composeVersion}"
+        const val runtime = "androidx.compose.runtime:runtime:${Versions.composeVersion}"
+        const val ui = "androidx.compose.ui:ui:${Versions.composeVersion}"
+        const val ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.composeVersion}"
+        const val activity = "androidx.activity:activity-compose:${Versions.activity}"
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:${Versions.constraintLayout}"
+    }
+
     object Support {
-        const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
-        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
         const val ktx = "androidx.core:core-ktx:${Versions.androidx}"
+        const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+        const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+        const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+        const val activityKtx = "androidx.activity:activity-ktx:${Versions.activity}"
+
         const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
         const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
-        const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+
+        // Questionable
         const val vectordrawable = "androidx.vectordrawable:vectordrawable:${Versions.vectorDrawable}"
         const val preference = "androidx.preference:preference-ktx:${Versions.preference}"
     }
 
-    object DependencyInjection {
-        const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
-        const val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
-        const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-        const val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
-    }
-
     object NavigationComponents {
-        const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationComponents}"
-        const val fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationComponents}"
-        const val ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigationComponents}"
+        const val navigation = "androidx.navigation:navigation-compose:${Versions.navigation}"
+        const val navigationHilt = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigation}"
     }
 
     object Networking {
@@ -49,8 +60,12 @@ object Dependencies {
     }
 
     object Taste {
-        const val mvvmDagger = "app.futured.arkitekt:dagger:${Versions.arkitekt}"
         const val mvvmCrInteractors = "app.futured.arkitekt:cr-usecases:${Versions.arkitekt}"
+    }
+
+    object Hilt {
+        const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+        const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
     }
 
     object Other {
