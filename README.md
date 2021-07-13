@@ -14,7 +14,6 @@
 - ~~Backend: Apiary (add link)~~
   - ~~Prod: https://live.app.com~~
   - ~~Staging: https://staging.app.com~~
-- Architecture: [MVVM](https://github.com/futuredapp/mvvm-android)
 - Interactors: Kotlin Coroutines
 - Product Flavors: mock, dev, prod
 - Build Variants: debug, enterprise, release

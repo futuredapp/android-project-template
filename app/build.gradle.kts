@@ -154,6 +154,9 @@ dependencies {
     implementation(Dependencies.Support.vectordrawable)
     implementation(Dependencies.Support.preference)
 
+    implementation(Dependencies.Accompanist.accompanistGlide)
+    implementation(Dependencies.Accompanist.accompanistInsets)
+
     // Compose
     implementation(Dependencies.Compose.animation)
     implementation(Dependencies.Compose.foundation)

@@ -12,6 +12,10 @@ class NavigationActions(private val navController: NavController) {
         launchSingleTop = true
     }
 
+    fun popBackStack() {
+        navController.popBackStack()
+    }
+
     fun navigateToDetailScreen(title: String, subtitle: String? = null, value: String? = null) =
         navController.navigate(Destination.Detail.buildRoute(title, subtitle, value))
 }

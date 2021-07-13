@@ -42,6 +42,11 @@ object Dependencies {
         const val preference = "androidx.preference:preference-ktx:${Versions.preference}"
     }
 
+    object Accompanist {
+        const val accompanistGlide = "com.google.accompanist:accompanist-glide:${Versions.accompanist}"
+        const val accompanistInsets = "com.google.accompanist:accompanist-insets:${Versions.accompanist}"
+    }
+
     object NavigationComponents {
         const val navigation = "androidx.navigation:navigation-compose:${Versions.navigation}"
         const val navigationHilt = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigation}"
