@@ -7,13 +7,13 @@ object Versions {
 
     // plugins
     const val detekt = "1.14.2"
-    const val ktlintGradle = "9.4.1"
-    const val ktlint = "0.39.0"
+    const val ktlintGradle = "10.1.0"
+    const val ktlint = "0.41.0"
 
     // kotlin
     const val kotlin = "1.5.10"
 
-    const val composeVersion = "1.0.0-rc01"
+    const val composeVersion = "1.0.0-rc02"
 
     // support
     const val androidx = "1.3.2"

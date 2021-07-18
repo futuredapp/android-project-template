@@ -6,7 +6,6 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import com.google.accompanist.insets.ProvideWindowInsets
 
 private val LightColorPalette = lightColors(
     primary = orange300,
@@ -46,13 +45,11 @@ fun AppTheme(
     }
 
     CompositionLocalProvider(LocalIsInPreviewMode provides isInPreview) {
-        ProvideWindowInsets {
             MaterialTheme(
                 colors = colors,
                 typography = typography,
                 shapes = shapes,
                 content = content
             )
-        }
     }
 }

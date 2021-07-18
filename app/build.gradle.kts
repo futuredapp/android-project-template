@@ -5,7 +5,6 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    kotlin("android.extensions")
     kotlin("plugin.serialization") version Versions.kotlin
     id("dagger.hilt.android.plugin")
 }
@@ -29,12 +28,6 @@ android.apply {
                     put("room.schemaLocation", "$projectDir/schemas")
                 }
             }
-        }
-    }
-
-    androidExtensions.apply {
-        configure<AndroidExtensionsExtension> {
-            isExperimental = true
         }
     }
 
@@ -141,6 +134,7 @@ android.apply {
 dependencies {
     // Kotlin
     implementation(kotlin(Dependencies.Kotlin.stdlib, KotlinCompilerVersion.VERSION))
+    implementation(platform(Dependencies.Kotlin.kotlinReflect))
 
     // Support
     implementation(Dependencies.Support.appcompat)
@@ -155,7 +149,6 @@ dependencies {
     implementation(Dependencies.Support.preference)
 
     implementation(Dependencies.Accompanist.accompanistGlide)
-    implementation(Dependencies.Accompanist.accompanistInsets)
 
     // Compose
     implementation(Dependencies.Compose.animation)
@@ -169,7 +162,6 @@ dependencies {
     implementation(Dependencies.Compose.ui_tooling)
     implementation(Dependencies.Compose.activity)
     implementation(Dependencies.Compose.constraintLayout)
-
 
     // MVVM
     implementation(Dependencies.Taste.mvvmCrInteractors)

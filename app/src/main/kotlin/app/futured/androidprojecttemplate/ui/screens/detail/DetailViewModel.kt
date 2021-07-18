@@ -1,20 +1,19 @@
 package app.futured.androidprojecttemplate.ui.screens.detail
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import app.futured.arkitekt.crusecases.CoroutineScopeOwner
+import app.futured.androidprojecttemplate.tools.arch.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
 import javax.inject.Inject
 
 @HiltViewModel
 class DetailViewModel @Inject constructor(
-    val viewState: DetailViewState
-): ViewModel(), CoroutineScopeOwner {
+    override val viewState: DetailViewState
+) : BaseViewModel<DetailViewState>(), Detail.Actions {
 
-    override val coroutineScope: CoroutineScope = viewModelScope
+    override fun navigateBack() {
+        sendEvent(NavigateBackEvent)
+    }
 
-    fun incrementCounter() {
+    override fun incrementCounter() {
         viewState.counter++
     }
 }

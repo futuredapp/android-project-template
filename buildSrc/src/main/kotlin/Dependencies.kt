@@ -11,6 +11,7 @@ object Dependencies {
     object Kotlin {
         const val gradlePlugin = "gradle-plugin"
         const val stdlib = "stdlib-jdk7"
+        const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:1.5.0-RC"
     }
 
     object Compose {
@@ -22,7 +23,7 @@ object Dependencies {
         const val runtime_livedata = "androidx.compose.runtime:runtime-livedata:${Versions.composeVersion}"
         const val runtime = "androidx.compose.runtime:runtime:${Versions.composeVersion}"
         const val ui = "androidx.compose.ui:ui:${Versions.composeVersion}"
-        const val ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.composeVersion}"
+        const val ui_tooling = "androidx.compose.ui:ui-tooling:1.0.0-beta09" // Replace to composeVersion when fixed preview on current version
         const val activity = "androidx.activity:activity-compose:${Versions.activity}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:${Versions.constraintLayout}"
     }
@@ -44,7 +45,6 @@ object Dependencies {
 
     object Accompanist {
         const val accompanistGlide = "com.google.accompanist:accompanist-glide:${Versions.accompanist}"
-        const val accompanistInsets = "com.google.accompanist:accompanist-insets:${Versions.accompanist}"
     }
 
     object NavigationComponents {
