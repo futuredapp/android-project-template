@@ -28,7 +28,7 @@
 
 ### Used Tools
 
-- Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://arturbosch.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/futuredapp/danger)**
+- Code style - **[ktlint](https://ktlint.github.io/)**, **[detekt](https://detekt.github.io/detekt/)**, **[Android lint](http://tools.android.com/tips/lint)**, **[Danger](https://github.com/futuredapp/danger)**
 
 ### ~~Test accounts~~
 
