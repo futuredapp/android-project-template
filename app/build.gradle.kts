@@ -11,11 +11,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion(ProjectSettings.compileSdkVersion)
+    compileSdk = ProjectSettings.compileSdkVersion
+
     defaultConfig {
         applicationId = ProjectSettings.applicationId
-        minSdkVersion(ProjectSettings.minSdk)
-        targetSdkVersion(ProjectSettings.targetSdk)
+        minSdk = ProjectSettings.minSdk
+        targetSdk = ProjectSettings.targetSdk
         versionCode = ProjectSettings.versionCode
         versionName = ProjectSettings.versionName
 
@@ -111,21 +112,21 @@ android {
         }
     }
 
-    flavorDimensions(ProjectSettings.Flavor.DIMENSION)
+    flavorDimensions.add(ProjectSettings.Flavor.DIMENSION)
 
     productFlavors {
         create(ProjectSettings.Flavor.MOCK) {
-            setDimension(ProjectSettings.Flavor.DIMENSION)
+            dimension = ProjectSettings.Flavor.DIMENSION
         }
         create(ProjectSettings.Flavor.DEV) {
-            setDimension(ProjectSettings.Flavor.DIMENSION)
+            dimension = ProjectSettings.Flavor.DIMENSION
         }
         create(ProjectSettings.Flavor.PROD) {
-            setDimension(ProjectSettings.Flavor.DIMENSION)
+            dimension = ProjectSettings.Flavor.DIMENSION
         }
     }
 
-    lintOptions {
+    lint {
         textReport = true // Write a text report to the console (Useful for CI logs)
         isExplainIssues = false // HTML/XML reports are too verbose in console logs
         isCheckDependencies = false // Required to get all unused resource from other modules (disabled to speed up linting)

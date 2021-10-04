@@ -3,7 +3,7 @@
 object Versions {
 
     // gradle
-    const val androidGradlePlugin = "4.1.1"
+    const val androidGradlePlugin = "7.0.2"
 
     // plugins
     const val detekt = "1.14.2"
@@ -11,7 +11,7 @@ object Versions {
     const val ktlint = "0.39.0"
 
     // kotlin
-    const val kotlin = "1.4.32"
+    const val kotlin = "1.5.31"
 
     // support
     const val androidx = "1.3.2"
