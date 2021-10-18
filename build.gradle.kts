@@ -21,7 +21,6 @@ plugins {
     idea
     id(Dependencies.Plugins.detekt) version Versions.detekt
     id(Dependencies.Plugins.ktlint) version Versions.ktlintGradle
-    id(Dependencies.Plugins.templates) version Versions.arkitekt
 }
 
 tasks {

@@ -1,6 +1,6 @@
 package app.futured.androidprojecttemplate.ui.navigation
 
-import app.futured.arkitekt.core.factory.BaseViewModelFactory
+import app.futured.arkitekt.dagger.factory.BaseViewModelFactory
 import javax.inject.Inject
 import javax.inject.Provider
 import kotlin.reflect.KClass
