@@ -7,8 +7,7 @@ object Versions {
 
     // plugins
     const val detekt = "1.14.2"
-    const val ktlintGradle = "9.4.1"
-    const val ktlint = "0.39.0"
+    const val ktlintGradle = "10.1.0"
 
     // kotlin
     const val kotlin = "1.5.31"

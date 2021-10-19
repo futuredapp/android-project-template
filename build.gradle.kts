@@ -42,7 +42,6 @@ subprojects {
     apply(plugin = Dependencies.Plugins.ktlint)
 
     ktlint {
-        version.set(Versions.ktlint)
         ignoreFailures.set(true)
         android.set(true)
         outputToConsole.set(true)
@@ -61,7 +60,6 @@ detekt {
 }
 
 ktlint {
-    version.set(Versions.ktlint)
     ignoreFailures.set(true)
     android.set(true)
     outputToConsole.set(true)
