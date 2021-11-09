@@ -36,7 +36,7 @@
 
 ### Security standard
 
-This project is using ~~Standard, High, Higher~~ security standard.
+This project is using ~~Standard, High, Highest~~ security standard.
 
 ~~[Project specific standard](www.notion.so)~~
 
