@@ -34,6 +34,13 @@
 
 - ~~dev - login: `a@a.com`, password: `hesloheslo`~~
 
+### Security standard
+
+This project complies with ~~Standard (F0), High (F1), Highest (F2)~~ security standard.
+
+
+~~[Project specific standard](www.notion.so)~~
+
 ### Additional Scripts
 
 1. `clean` - remove all `build` folders
