@@ -1,3 +1,9 @@
+# This template is archived. Use [new compose version](https://github.com/futuredapp/android-project-template-compose)
+<br/>
+<br/>
+<br/>
+
+
 # ~~Project name~~ (Android)
 
 ![minSdk](https://img.shields.io/badge/minSdk-21-brightgreen.svg?style=flat) ![targetSdk](https://img.shields.io/badge/targetSdk-30-brightgreen.svg?style=flat) ![Bitrise](https://img.shields.io/bitrise/appid.svg?token=apptoken) 
